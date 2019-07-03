@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="../../static/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form action="" method="post">
+
+    <input type="submit" value="Submit">
+</form>
+<main role="main">
+    <link rel="stylesheet" type="text/css" href="../../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <section class="jumbotron text-center">
+                              <div class="container">
+                        <form action="#" method="post" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+                                            <input name="keyword" type="text" class="form-control search-slt" placeholder="Keyword Search">
+                                        </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <select name="beds" class="form-control search-slt" id="exampleFormControlSelect1">
+                                                <option>Number of Bedrooms</option>
+                                                <option>all beds</option>
+                                                <option>1 bed</option>
+                                                <option>2 beds</option>
+                                                <option>3 beds</option>
+                                                <option>3+ beds</option>
+                                            </select>
+                                        </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-15 p-0">
+                                            <select name="baths" class="form-control search-slt" id="exampleFormControlSelect2">
+                                                <option>Number of Bathrooms</option>
+                                                <option>all baths</option>
+                                                <option>1 bath</option>
+                                                <option>2 baths</option>
+                                                <option>3 baths</option>
+                                                <option>3+ baths</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+        <div class="container">
+          <h1 class="jumbotron-heading">Listings example</h1>
+          <p class="lead text-muted">HOOS HOME</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">START ANOTHER APARTMENT SEARCH</a>
+            <a href="#" class="btn btn-secondary my-2">GO BACK</a>
+          </p>
+        </div>
+      </section>
+    {% if filter %}
+      <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+          {% for choice in filter %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{MEDIA_URL}}{{ choice.front_View.url }}" alt="Card image cap">
+                <div class="card-body">
+
+                    <h5 class="jumbotron-heading">{{choice.address}}</h5>
+                    <span class="heading">User Rating</span>
+                    <span class="fa fa-star {% if choice.ratings > 0 %}checked{% endif %}"></span>
+                    <span class="fa fa-star {% if choice.ratings > 1 %}checked{% endif %}"></span>
+                    <span class="fa fa-star {% if choice.ratings > 2 %}checked{% endif %}"></span>
+                    <span class="fa fa-star {% if choice.ratings > 3 %}checked{% endif %}"></span>
+                    <span class="fa fa-star {% if choice.ratings > 4 %}checked{% endif %}"></span>
+                  <p class="card-text">{{choice.description}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">More Info</button>
+                    </div>
+                      <small class="text-muted">{{choice.beds}} Beds</small>
+                      <small class="text-muted">{{choice.baths}} Baths</small>
+                    <small class="text-muted">${{choice.price}}/Month</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+
+
+
+          </div>
+        </div>
+      </div>
+    {% else %}
+     <h5 class="jumbotron-heading">NO RESULTS FOUND</h5>
+    {% endif %}
+
+    </main>
+{% endblock %}

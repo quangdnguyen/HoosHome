@@ -1,0 +1,47 @@
+Sources/Sites/References used throughout this project:
+1. https://medium.com/trabe/oauth-authentication-in-django-with-social-auth-c67a002479c1
+2. https://getbootstrap.com/docs/4.0/components/carousel/
+3. https://python-social-auth-docs.readthedocs.io/en/latest/backends/google.html
+4. https://docs.djangoproject.com/en/2.2/
+5. https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/
+6. https://django-crispy-forms.readthedocs.io/en/latest/
+7. https://www.w3schools.com/bootstrap/bootstrap_templates.asp
+8. https://www.geeksforgeeks.org/python-uploading-images-in-django/
+9. http://www.learningaboutelectronics.com/Articles/How-to-display-an-image-in-Django.php
+10. https://www.w3schools.com/css/css_positioning.asp
+11. https://fosstack.com/how-to-add-google-authentication-in-django/
+12. https://stackoverflow.com/questions/24373341/django-image-resizing-and-convert-before-upload
+13. https://www.w3schools.com/html/html_images.asp
+14. https://www.patricksoftwareblog.com/setting-up-the-django-project-part-vi-environments-for-development-vs-production/
+15. https://stackoverflow.com/questions/15454008/how-to-reset-db-in-django-i-get-a-command-reset-not-found-error
+16. https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html
+17. https://docs.travis-ci.com/user/common-build-problems/
+18. https://stackoverflow.com/questions/37618059/how-do-i-create-a-superuser-account-in-django-1-9-6
+19. https://stackoverflow.com/questions/36410107/running-manage-py-migrate-during-heroku-deployment
+20. https://stackoverflow.com/questions/10858813/restrict-login-email-with-google-oauth2-0-to-specific-domain-name
+21. https://developers.google.com/identity/protocols/OAuth2
+22. https://realpython.com/testing-in-django-part-1-best-practices-and-examples/
+23. https://django-testing-docs.readthedocs.io/en/latest/basic_unittests.html
+24. https://wsvincent.com/django-testing-tutorial/
+25. https://semantic-ui.com/modules/rating.html
+26. https://stackoverflow.com/questions/29122843/django-render-to-view-not-html
+27. https://bootsnipp.com/snippets/vl4R7t
+28. https://fontawesome.com/icons
+29. https://isotope.metafizzy.co/filtering.html
+30. https://jquery.com/
+31. https://getuikit.com/
+32. https://getbootstrap.com/docs/4.0/components/card/
+33. https://getbootstrap.com/docs/4.0/components/navbar/
+34. https://www.w3schools.com/howto/howto_css_star_rating.asp
+
+Static Images (Does not include images uploaded via the listing form):
+1. https://www.iconfinder.com/icons/2247649/avatar_my_profile_profile_user_user_profile_icon
+2. https://virginiasports.com/news/2019/2/8/parking-information-for-saturday-uva-athletics-events.aspx
+3. https://www.freepik.com/free-icon/search_788138.htm
+4. https://www.flaticon.com/free-icon/empty-email_80599
+5. https://www.flaticon.com/free-icon/review_651191
+6. https://www.flatsatwestvillage.com/
+7. https://www.forrent.com/va/charlottesville/grand-marc-at-the-corner/t3kw9n8
+8. https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiuhNfzvvXhAhWSmOAKHVNaB2QQjRx6BAgBEAU&url=http%3A%2F%2Fwww.rbiva.com%2Fproject%2Funiversity-virginia-rotunda%2F&psig=AOvVaw0FTKkgvmsJFGwDcRKJe9iJ&ust=1556633788654992
+
+

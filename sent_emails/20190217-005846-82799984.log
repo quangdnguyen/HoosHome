@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: wsh5wb@virginia.edu
+Date: Sun, 17 Feb 2019 05:58:46 -0000
+Message-ID: <155038312629.14792.12372158637436287370@D94KCGC2>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/accounts/reset/MQ/53x-7feb28109dbb35625fe6/
+
+Your username, in case you've forgotten: wade
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------

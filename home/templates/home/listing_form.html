@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!-- Code template from https://bootsnipp.com/snippets/vl4R7 -->
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <title>Create Listing</title>
+  <!--Made with love by Mutiullah Samim -->
+
+  <!--Bootsrap 4 CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--Custom styles-->
+  <!-- <link rel="stylesheet" type="text/css" href="../../static/loginStyle.css"> -->
+</head>
+
+<div class="container-fluid">
+		<div class="container">
+			<div class="formBox">
+				<form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+
+						<div class="row">
+							<div class="col-sm-12">
+								<h1>Post your listing</h1>
+							</div>
+						</div>
+
+
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox ">
+									<div class="inputText">Address</div>
+                                  <div class="input">{{form.address}}</div>
+
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Realtor Agent</div>
+                                  <div class="input">{{form.realtor_agent}}</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Price($/month)</div>
+									<div class="input">{{form.price}}</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Phone Number</div>
+									<div class="input">{{form.phone_number}}</div>
+								</div>
+							</div>
+						</div>
+					<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox focus">
+									<div class="inputText">Bedrooms</div>
+									<div class="input">{{form.beds}}</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox focus">
+									<div class="inputText">Bathrooms</div>
+									<div class="input">{{form.baths}}</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox">
+									<div class="inputText">Website</div>
+									<div class="input">{{form.realtor_site}}</div>
+								</div>
+							</div>
+						</div>
+											<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox">
+									<div class="inputText">Description</div>
+									<div class="input">{{form.description}}</div>
+								</div>
+							</div>
+						</div>
+
+                  <div class="panel-body" >
+					<div class="panel-heading " >
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#collapse1" class="text-center">
+								<i class="indicator fas fa-dumbbell" aria-hidden="true"></i>Amenities
+							</a>
+						</h4>
+					</div>
+                </div>
+<div id="collapse1" class="panel-collapse collapse in" >
+                  <div class="row">
+
+                    <div class="col-sm-3">{{form.gym}}<label>Fitness Center</label></div>
+                    <div class="col-sm-3">{{form.parking}}<label>Parking</label></div>
+                    <div class="col-sm-3">{{form.wifi}}<label>Internet Connection</label></div>
+                    <div class="col-sm-3">{{form.furnished}}<label>Furnished</label></div>
+
+                  </div>
+                  <div class="row">
+
+                    <div class="col-sm-3">{{form.lounge}}<label>Lounge</label></div>
+                    <div class="col-sm-3">{{form.laundry}}<label>Laundry Room</label></div>
+                    <div class="col-sm-3">{{form.pets}}<label>Pets Allowed</label></div>
+                    <div class="col-sm-3">{{form.AC}}<label>Air Conditioner</label></div>
+
+                  </div>
+                  <div class="row">
+
+                    <div class="col-sm-6">{{form.heating}}<label>Heating</label></div>
+                    <div class="col-sm-6">{{form.business_center}}<label>Business Center</label></div>
+
+                  </div>
+
+</div>
+                  <div class="panel-body" >
+					<div class="panel-heading " >
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#collapse2" class="text-center">
+								<i class="indicator fas fa-images" aria-hidden="true"></i>Upload Images
+							</a>
+						</h4>
+					</div>
+                </div>
+                  <div id="collapse2" class="panel-collapse collapse in" >
+                                      <div class="row">
+                    <div class="col-sm-4"><div class="inputText">Front View</div>{{form.front_View}}</div>
+                    <div class="col-sm-4"><div class="inputText">Interior View</div>{{form.interior_View}}</div>
+                    <div class="col-sm-4"><div class="inputText">Back View</div>{{form.back_View}}</div>
+						</div>
+
+                  </div>
+
+
+<br>
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="submit" name="" class="button" value="Submit">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<style>
+  body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.formBox{
+	margin-top: 90px;
+	padding: 50px;
+}
+.formBox  h1{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	font-size: 48px;
+}
+.inputBox{
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+}
+.inputBox .inputText{
+	position: absolute;
+    font-size: 24px;
+    line-height: 50px;
+    transition: .5s;
+    opacity: .5;
+}
+#id_address{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+#id_price{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+#id_beds{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+#id_baths{
+	padding-left: 40px;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+#id_realtor_agent{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+#id_realtor_site{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+#id_phone_number {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+
+.inputBox .input{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+    outline: none;
+    font-size: 24px;
+
+
+}
+#id_description{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+
+}
+.focus .inputText{
+	transform: translateY(-30px);
+	font-size: 18px;
+	opacity: 1;
+	color: #00bcd4;
+
+}
+textarea{
+	height: 100px !important;
+}
+
+.button {
+	width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #03A9F4;
+    color: #fff;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	 <script type="text/javascript">
+	 	 	$("#id_baths").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 		 	$("#id_beds").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 	$("#id_address").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 		 	$("#id_phone_number").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 		 	$("#id_realtor_agent").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 		 	$("#id_price").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 	$("#id_realtor_site").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 		 		 	$("#id_description").focus(function() {
+	 		$(this).parent().parent().addClass("focus");
+	 	})
+	 function toggleChevron(e) {
+		$(e.target)
+				.prev('.panel-heading')
+				.find("i.indicator")
+				.toggleClass('fa-caret-down fa-caret-right');
+	}
+	$('#accordion').on('hidden.bs.collapse', toggleChevron);
+	$('#accordion').on('shown.bs.collapse', toggleChevron);
+
+
+</script>
+
+
+{% endblock %}
