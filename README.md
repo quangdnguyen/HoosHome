@@ -10,6 +10,7 @@
 * Configurations Manager: Tanner Dellett-Wion
 
 # Website: https://hooshome.herokuapp.com/
+![image](https://user-images.githubusercontent.com/36176810/61836281-a8401e80-ae4d-11e9-8291-a25a41f4b16e.png)
 
 Hoos Home is a web application to connect students with housing options. On the home page, you can search housing based on keywords and number of beds and baths. 
 
